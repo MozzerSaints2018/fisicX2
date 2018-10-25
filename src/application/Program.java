@@ -21,6 +21,8 @@ public class Program {
 			String nome = sc.nextLine();
 			System.out.print("Idade: ");
 			int idade = sc.nextInt();
+			System.out.print("Sexo (M / F) : ");
+			char sexo = sc.nextLine().charAt(0);
 			System.out.print("CPF: ");
 			String cpf = sc.nextLine();
 			System.out.print("Logradouro: ");
@@ -33,7 +35,7 @@ public class Program {
 			System.out.print("Bairro: ");
 			String bairro = sc.nextLine();
 			System.out.println();
-			Pessoa pessoa = new Pessoa(nome, cpf, logradouro, numeroLogra, cidade, bairro, idade);
+			Pessoa pessoa = new Pessoa(nome, cpf, logradouro, numeroLogra, cidade, bairro, idade, sexo);
 
 			System.out.println("Avaliador ou Aluno");
 			String decision = sc.nextLine();
@@ -112,12 +114,12 @@ public class Program {
 			} else if(decision.equals("avaliador")){
 				System.out.println("Insira o novo código: ");
 				String codigoAvaliador = sc.nextLine();
-				Avaliador aval = new Avaliador(codigoAvaliador);
+				Avaliador aval = new Avaliador(codigoAvaliador);				
 			}else {
 				throw new DomainException("Tipo de usuário não localizado");
 			}
 		}
-		catch (InputMismatchException e) {
+		catch(InputMismatchException e) {
 			System.out.println("Valor Inválido!");
 		}
 		catch(DomainException e){

@@ -30,10 +30,7 @@ public class Aluno extends Pessoa{
 	private double abdominal;
 	private double panturrilha;
 	
-	public Aluno() {
-	}
-
-	
+	public Aluno() {}
 
 	public Aluno(double altura, double peso, double pescoco, double ombro, double bradireito, double braesquerdo,
 			double antibradireito, double antibraesquerdo, double torax, double cintura, double abdomen, double quadril,
@@ -67,7 +64,6 @@ public class Aluno extends Pessoa{
 		this.abdominal = abdominal;
 		this.panturrilha = panturrilha;
 	}
-
 
 
 	public double getAltura() {

@@ -9,11 +9,13 @@ public class Pessoa {
 	private String cidade;
 	private String bairro;
 	private int idade;
+	private char sexo;
 	
 	public Pessoa() {
 	}
 
-	public Pessoa(String nome, String cpf, String logradouro, int numeroLogra, String cidade, String bairro, int idade) {
+	public Pessoa(String nome, String cpf, String logradouro, int numeroLogra,
+			String cidade, String bairro, int idade, char sexo) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.logradouro = logradouro;
@@ -21,8 +23,17 @@ public class Pessoa {
 		this.cidade = cidade;
 		this.bairro = bairro;
 		this.idade = idade;
+		this.sexo = sexo;
 	}
 
+	public char getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(char sexo) {
+		this.sexo = sexo;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
